@@ -32,7 +32,7 @@ jobs:
         IAMGE_TAG: ${{ github.sha }}
       run: |
         cd src/front-end
-        docker build -tag $USERNAME/$REPO:$IMAGE_TAG -t $USERNAME/$REPO:latest .
+        docker build -t $USERNAME/$REPO:$IMAGE_TAG -t $USERNAME/$REPO:latest .
 
     - name: Push Docker Image
       env:
